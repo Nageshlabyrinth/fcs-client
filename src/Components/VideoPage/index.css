@@ -1,0 +1,38 @@
+.video-background {
+    position: relative;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  
+  .custom-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Center align content */
+    z-index: 1;
+    color: #fff; /* Adjust text color for visibility */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .custom-content {
+      top: 60%;
+    }
+  }

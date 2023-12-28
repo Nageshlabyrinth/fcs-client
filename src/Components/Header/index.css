@@ -1,0 +1,81 @@
+.fcsLogo-header {
+  height: 100px;
+  width: 100px;
+  
+}
+
+.nav-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-card-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-bg {
+  background-color: #000028 !important;
+  border-bottom: 2px solid aqua ;
+}
+h3 {
+  color: #fff;
+}
+.icons {
+  color: #fff;
+  font-weight: bold;
+  height: 25px;
+  width: 25px;
+}
+.heading {
+  color: #fff;
+}
+.nav-button-pod {
+  background-color: transparent;
+  border-color: aqua;
+  border-radius: 8px;
+  border-width: 2px;
+  color: #fff;
+}
+.navbar {
+  color: #fff;
+}
+
+.navmenu-items :hover {
+  color: aqua;
+  text-decoration: underline aqua;
+}
+
+.company-name-mobile {
+  display: none; /* Hide the mobile version of the company name*/
+}
+
+@media (max-width: 768px) {
+  .fcsLogo-header {
+    height: 30px;
+    width: 30px;
+  }
+
+  .company-name {
+    display: none; /* Hide the mobile version of the company name */
+  }
+
+  .company-name-mobile {
+    display: block; /* Hide the mobile version of the company name */
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-toggler-icons {
+    color: #fff !important; /* Change hamburger menu color to white */
+  }
+  .navmenu-items :hover {
+    color: aqua !important;
+    text-decoration: underline aqua;
+  }
+}
+
