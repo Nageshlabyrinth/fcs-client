@@ -146,3 +146,17 @@
     height: 500px;
     width: 600px;
 }
+.bottom-image-slingir2{
+    height: 400px;
+    width: 500px;
+    background-color: transparent;
+}
+
+
+.slingir-bottom-container2{
+    display: flex;
+    flex-direction: row;
+    background-color:#f0f0f0;
+    justify-content: center;
+    align-items: center;
+}

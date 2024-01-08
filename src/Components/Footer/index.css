@@ -60,13 +60,14 @@
     
 }
 
+
 /* For screens smaller than 768px */
 @media screen and (max-width: 768px) {
   .portfolio-list {
-    display: none; /* Hide the list by default on mobile */
-    max-height: 0; /* Set maximum height initially */
+    display: none;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Add a smooth transition */
+    transition: max-height 0.3s ease;
   }
 
   .Heading-footer {
@@ -80,6 +81,20 @@
     transform: rotate(0deg);
     transition: transform 0.3s ease;
   }
+  .fcs-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-around;
+    width: 80%;
+  }
+  .fcs-footer-bottom-line {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: space-around;
+      width: 80%;
+    }
 
   .arrow-icon.rotate {
     transform: rotate(180deg);
@@ -90,8 +105,8 @@
   }
 
   .Heading-footer:hover + .portfolio-list {
-    display: block; /* Display the list when the heading is hovered */
-    max-height: 200px; /* Adjust the maximum height as needed */
+    display: block;
+    max-height: 200px;
     position: absolute;
     background-color: #000028;
     padding: 10px;
@@ -101,102 +116,20 @@
 }
 
 /* For screens larger than 768px */
+/* For screens larger than 768px, display the list */
 @media screen and (min-width: 769px) {
   .portfolio-list {
-    display: block; /* Show the list normally on larger screens */
-    max-height: none; /* Remove maximum height on larger screens */
+    display: block !important; /* Important to override other styles on larger screens */
+    max-height: none;
   }
 }
 
-  
-  /* For screens larger than 768px */
-  @media screen and (min-width: 769px) {
-    .portfolio-list {
-      display: block; /* Show the list normally on larger screens */
-    }
-  }
-  
-  /* index.css */
+/* Hide the list by default */
+.portfolio-list {
+  display: none;
+}
 
-/* Your existing styles */
-
-/* Media queries for responsiveness */
-
-/* For screens smaller than 768px (adjust this breakpoint as needed) */
- @media screen and (max-width: 768px) {
-    .portfolio-list {
-      display: none; /* Hide the list by default on mobile */
-      max-height: 0; /* Set maximum height initially */
-      overflow: hidden;
-      transition: max-height 0.3s ease; /* Add a smooth transition */
-    }
-  
-    .Heading-footer {
-      cursor: pointer;
-    }
-  
-    .Heading-footer:hover + .portfolio-list {
-      display: block; /* Display the list when the heading is hovered */
-      max-height: 200px; /* Adjust the maximum height as needed */
-      position: absolute;
-      background-color:#000028;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-    }
-  }
-  
-  /* For screens larger than 768px */
-  @media screen and (min-width: 769px) {
-    .portfolio-list {
-      display: block; /* Show the list normally on larger screens */
-      max-height: none; /* Remove maximum height on larger screens */
-    }
-  }
-   
-  @media screen and (max-width: 768px) {
-    .portfolio-list {
-      display: none; /* Hide the list by default on mobile */
-      max-height: 0; /* Set maximum height initially */
-      overflow: hidden;
-      transition: max-height 0.3s ease; /* Add a smooth transition */
-    }
-  
-    .Heading-footer {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    .arrow-icon {
-      transform: rotate(0deg);
-      transition: transform 0.3s ease;
-    }
-  
-    .arrow-icon.rotate {
-      transform: rotate(180deg);
-    }
-  
-    .Heading-footer:hover .arrow-icon {
-      transform: rotate(180deg);
-    }
-  
-    .Heading-footer:hover + .portfolio-list {
-      display: block; /* Display the list when the heading is hovered */
-      max-height: 200px; /* Adjust the maximum height as needed */
-      position: absolute;
-      background-color: #000028;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-    }
-  }
-
-  /* index.css */
-
-/* Your existing styles */
-
-/* Media queries for responsiveness */
-
-/* For screens smaller than 768px (adjust this breakpoint as needed) */
+/* Show the list for mobile devices when the 'show' class is applied */
+.portfolio-list.show {
+  display: block;
+}

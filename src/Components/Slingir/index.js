@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import bannerImage from "../images/Slinger/slingir1.jpg";
-import sli from '../images/Slinger/sli.png'
+import sli from "../images/Slinger/sli.png";
 import card1 from "../images/Slinger/card1.jpeg";
 import card2 from "../images/Slinger/card2.jpeg";
 import card3 from "../images/Slinger/card3.jpeg";
@@ -10,6 +10,8 @@ import release from "../images/Slinger/Release.jpeg";
 import dev from "../images/Slinger/development.jpeg";
 import support from "../images/Slinger/support.jpeg";
 import platform from "../images/Slinger/platform.jpeg";
+import slingir2 from "../images/Slinger/slingir2.png";
+import slingir3 from "../images/Slinger/slingir3.png";
 
 import "./index.css";
 const Slingir = () => {
@@ -130,6 +132,25 @@ const Slingir = () => {
             </div>
           </div>
         </div>
+        <div className="slingir-bottom-container2 m-0 p-3">
+          <div>
+            <img
+              src={slingir2}
+              alt="slingir"
+              className="bottom-image-slingir2"
+            />
+          </div>
+          <div className="slingir-bottom-content-container m-2 p-2">
+            <h3 className="bottom-heading-slingir">Slingr is born.</h3>
+            <p className="bottom-para-slingir">
+              In 2011, Grace Schroeder created Slingr in Denver, CO, to make app
+              development faster and easier using low-code technology. Since
+              then, the Slingr team has grown a lot, but we are still pursuing
+              the same mission as we were on day one: Make development better
+              for everyone.
+            </p>
+          </div>
+        </div>
         <div className="slingir-bottom-container m-3 p-3">
           <div className="slingir-bottom-content-container m-2 p-2">
             <h3 className="bottom-heading-slingir">The Best of Both Worlds</h3>
@@ -148,7 +169,26 @@ const Slingir = () => {
             </p>
           </div>
           <div>
-            <img src={sli} alt="fedility" className="bottom-image-slingir"/>
+            <img src={sli} alt="fedility" className="bottom-image-slingir" />
+          </div>
+        </div>
+        <div className="slingir-bottom-container2 m-0 p-3">
+          <div>
+            <img
+              src={slingir3}
+              alt="slingir"
+              className="bottom-image-slingir2"
+            />
+          </div>
+          <div className="slingir-bottom-content-container m-2 p-2">
+            {/* <h3 className="bottom-heading-slingir">Slingr is born.</h3> */}
+            <p className="bottom-para-slingir">
+              These days, Slingr offers a low-code development platform and
+              professional services driven by a world-class development team.
+              But our mission is bigger than building a great platform. It’s to
+              help the world access the benefits of the new age of software
+              development.
+            </p>
           </div>
         </div>
       </div>

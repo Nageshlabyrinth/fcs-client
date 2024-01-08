@@ -1,4 +1,4 @@
-import React ,{useState}from "react";
+import React, { useState } from "react";
 import {
   FaInstagramSquare,
   FaLinkedin,
@@ -14,9 +14,18 @@ const Footer = () => {
   const [showList, setShowList] = useState(false);
 
   // Function to toggle the list visibility
-  const toggleList = () => {
-    setShowList(!showList);
-  };
+  // function toggleList() {
+  //   const isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
+
+  //   if (isMobileDevice) {
+  //     setShowList(!showList); // Toggle the showList state for mobile devices
+  //   }
+  // }
+  function toggleList(section) {
+    setShowList(section === showList ? null : section);
+  }
+  
+
   return (
     <div className="fcs-footer-bg">
       <div className="fcs-card-container">
@@ -32,41 +41,40 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h4 className="Heading-footer" onClick={toggleList} >Portfolio<FaChevronDown className="arrow-icon" /></h4>
-          
-          {showList && (
-            <ul className="portfolio-list">
-            <li className="Heading-footer">Slingir</li>
-            <li className="Heading-footer">ALM</li>
-            <li className="Heading-footer">Web App development</li>
-            <li className="Heading-footer">Mobile App development</li>
-            <li className="Heading-footer">Customized development</li>
-          </ul>
-          )}
-          
-          
-          
-        </div>
-        <div>
-          <h4 className="Heading-footer" onClick={toggleList} >Explore<FaChevronDown className="arrow-icon" /></h4>
-          {showList && (
-          <ul className="portfolio-list">
-            <li className="Heading-footer">Community</li>
-            <li className="Heading-footer">Blog</li>
-          </ul>
-          )}
-        </div>
-        <div>
-          <h4 className="Heading-footer" onClick={toggleList} >FCS<FaChevronDown className="arrow-icon" /></h4>
-          {showList && (
-          <ul className="portfolio-list">
-            <li className="Heading-footer">About Us</li>
-            <li className="Heading-footer">Leadership</li>
-            <li className="Heading-footer">Careers</li>
-            <li className="Heading-footer">Case Studies</li>
-          </ul>
-          )}
-        </div>
+  <h4 className="Heading-footer" onClick={() => toggleList("portfolio")}>
+    Portfolio <FaChevronDown className="arrow-icon" />
+  </h4>
+  <ul className={`portfolio-list ${showList === "portfolio" ? "show" : ""}`}>
+    <li className="Heading-footer">Slingir</li>
+    <li className="Heading-footer">ALM</li>
+    <li className="Heading-footer">Web App development</li>
+    <li className="Heading-footer">Mobile App development</li>
+    <li className="Heading-footer">Customized development</li>
+  </ul>
+</div>
+
+<div>
+  <h4 className="Heading-footer" onClick={() => toggleList("explore")}>
+    Explore <FaChevronDown className="arrow-icon" />
+  </h4>
+  <ul className={`portfolio-list ${showList === "explore" ? "show" : ""}`}>
+    <li className="Heading-footer">Community</li>
+    <li className="Heading-footer">Blog</li>
+  </ul>
+</div>
+
+<div>
+  <h4 className="Heading-footer" onClick={() => toggleList("fcs")}>
+    FCS <FaChevronDown className="arrow-icon" />
+  </h4>
+  <ul className={`portfolio-list ${showList === "fcs" ? "show" : ""}`}>
+    <li className="Heading-footer">About Us</li>
+    <li className="Heading-footer">Leadership</li>
+    <li className="Heading-footer">Careers</li>
+    <li className="Heading-footer">Case Studies</li>
+  </ul>
+</div>
+
         <div>
           <h4 className="Heading-footer">Contact</h4>
           <ul className="portfolio-list-contact">

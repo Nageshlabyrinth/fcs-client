@@ -8,7 +8,7 @@ import "./index.css";
 const Header = () => {
   return (
     <>
-      <div className="bg-body-tertiary navbar-bg">
+      <div className=" navbar-bg">
         <div className="nav-card ">
           <div>
             <div className="heading">
@@ -40,6 +40,7 @@ const Header = () => {
                 <div
                   className="collapse navbar-collapse"
                   id="navbarNavDropdown"
+                  
                 >
                   <ul className="navbar-nav">
                     <li className="nav-item dropdown navmenu-items mb-2 p-2">
@@ -148,7 +149,7 @@ const Header = () => {
           <div>
             <div className="nav-card-right m-2 p-2">
               <CiGlobe className="icons" />
-              <h3 className="m-2 p-2">INDIA</h3>
+              <h3 className="m-2 p-2  heading-color">INDIA</h3>
               <CiSearch className="icons" />
             </div>
             <div className="nav-card-right">

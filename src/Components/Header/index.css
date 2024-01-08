@@ -19,7 +19,7 @@
   background-color: #000028 !important;
   border-bottom: 2px solid aqua ;
 }
-h3 {
+.heading-color {
   color: #fff;
 }
 .icons {
@@ -29,7 +29,7 @@ h3 {
   width: 25px;
 }
 .heading {
-  color: #fff;
+  color: #fff !important;
 }
 .nav-button-pod {
   background-color: transparent;
@@ -39,6 +39,14 @@ h3 {
   color: #fff;
 }
 .navbar {
+  color: #fff;
+}
+
+.nav-item{
+  color: #fff;
+}
+
+.navmenu-items {
   color: #fff;
 }
 
@@ -70,8 +78,14 @@ h3 {
     align-items: center;
   }
 
-  .navbar-toggler-icons {
-    color: #fff !important; /* Change hamburger menu color to white */
+  .navbar-toggler-icon {
+    color: #fff !important;
+    background-color: white ; /* Change hamburger menu color to white */
+  }
+  .navbar-toggler{
+    background-color: #fff !important;
+    margin: 10px;
+    margin-top: 10px;
   }
   .navmenu-items :hover {
     color: aqua !important;
